@@ -3,7 +3,7 @@ const cors = require('cors');
 const dataRoutes = require('./routes/dataRoutes');
 
 const connectDB = require('./config/db');
-const { startCronJob } = require('./jobs/dataCronJob');
+const { startCronJob, startInterval } = require('./jobs/dataCronJob');
 
 
 const app = express(); //intitialising a server
@@ -23,8 +23,9 @@ app.get("/status",(request, response)=>{
 
 async function startServer() {
   await connectDB();
-  startCronJob();
-
+//   startCronJob();
+     startInterval();
+     
   //Starting a server
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

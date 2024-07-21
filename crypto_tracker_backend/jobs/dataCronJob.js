@@ -12,13 +12,23 @@ async function trackData() {
     }
 }
 
-function startCronJob() {
-    const job = new cron.CronJob('*/5 * * * * *', async () => {
+// function startCronJob() {
+//     const job = new cron.CronJob('*/5 * * * * *', async () => {
+//         console.log('Fetching data...');
+//         await trackData();
+//     });
+
+//     job.start();
+// }
+
+// module.exports = { startCronJob };
+
+function startInterval() {
+    console.log('Starting interval to fetch crypto data every 3 seconds...');
+    setInterval(async () => {
         console.log('Fetching data...');
         await trackData();
-    });
-
-    job.start();
+    }, 3000); // Fetch data every 3 seconds
 }
 
-module.exports = { startCronJob };
+module.exports = { startInterval };

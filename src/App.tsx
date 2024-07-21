@@ -14,7 +14,7 @@ const App: React.FC = () => {
     dispatch(fetchDataRequest(symbol));
     const interval = setInterval(() => {
       dispatch(fetchDataRequest(symbol));
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [dispatch, symbol]);
