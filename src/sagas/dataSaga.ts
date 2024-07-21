@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import axios from 'axios';
-import { FETCH_DATA_REQUEST, fetchDataSuccess, fetchDataFailure, FetchDataRequestAction } from '../actions/dataActions';
+import { FETCH_DATA_REQUEST, fetchDataSuccess, fetchDataFailure, FetchDataRequestAction } from '../actions/dataActions.ts';
 
 function* fetchData(action: FetchDataRequestAction) {
   try {

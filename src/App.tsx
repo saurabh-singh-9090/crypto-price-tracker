@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import CryptoTable from './components/CryptoTable';
-import SymbolSelector from './components/SymbolSelector';
-import { fetchDataRequest } from './actions/dataActions';
-import { RootState } from './store/store';
+import CryptoTable from './components/CryptoTable.tsx';
+import SymbolSelector from './components/SymbolSelector.tsx';
+import { fetchDataRequest } from './actions/dataActions.ts';
+import { RootState } from './store/store.ts';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();

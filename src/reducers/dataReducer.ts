@@ -1,5 +1,5 @@
 import { Reducer } from 'redux';
-import { FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE, DataActions } from '../actions/dataActions';
+import { FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE, DataActions } from '../actions/dataActions.ts';
 
 interface DataState {
   data: any[];
