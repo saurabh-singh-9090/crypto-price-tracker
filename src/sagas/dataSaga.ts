@@ -4,6 +4,7 @@ import { FETCH_DATA_REQUEST, fetchDataSuccess, fetchDataFailure, FetchDataReques
 
 function* fetchData(action: FetchDataRequestAction) {
   try {
+    console.log("ACTION---->>>>",action)
     const response = yield call(axios.get, `http://localhost:5000/data/crypto/${action.payload}`);
     yield put(fetchDataSuccess(response.data));
   } catch (error) {
