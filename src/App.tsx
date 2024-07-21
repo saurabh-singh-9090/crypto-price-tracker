@@ -26,7 +26,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h1>Crypto Tracker</h1>
+      <h1>Crypto Price Tracker</h1>
       <SymbolSelector symbol={symbol} setSymbol={handleSymbolChange} />
       <CryptoTable data={data} />
     </div>

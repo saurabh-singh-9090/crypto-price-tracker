@@ -15,7 +15,7 @@ export const loadState = () => {
       const serializedState = JSON.stringify(state);
       localStorage.setItem('state', serializedState);
     } catch {
-      // Ignore write errors
+      console.log("Failed to set state in the localstorage")
     }
   };
   
